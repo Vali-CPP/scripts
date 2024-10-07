@@ -1,9 +1,7 @@
 #! /bin/bash
 
-echo "Ingresa el nombre del directorio: "
-read nombre
-echo "Ingresa el formato (c++ o python): "
-read formato
+declare nombre=$1
+declare formato=$2
 
 if [ -d $nombre ]; then
   echo "El directorio $nombre ya existe"
