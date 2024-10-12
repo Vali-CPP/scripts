@@ -1,15 +1,18 @@
 #! /bin/bash
 
+sudo apt update
+sudo apt upgrade
+
 echo "Configuraste Git con tu nueva SSH?:"
 
 read respuesta
 
-if (( repuesta != "yes" or respuesta != "y" ))
+if (( repuesta != "y" ))
 then
 	echo "pues vaya y configurela, mamon"
 fi
 
-sudo apt install -y i3 kitty neovim fish polybar rofi freetube tmux nitrogen grub-customizer transmission zathura
+sudo apt install -y i3 kitty neovim fish polybar rofi tmux nitrogen transmission zathura
 
 echo "copiando dotfile del repo princial"
 
@@ -29,4 +32,30 @@ echo "Agregando Oh My Fish al .bashrc"
 
 echo "fish" | sudo tee -a ~/.bashrc
 
+echo "Descargando Departure Mono y agregando Departure Mono"
 
+if [ -d ~/Downloads ];
+then
+	curl --output-file ~/Downloads/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
+	sudo unzip ~/Downloads/DepartureMono.zip -d /usr/share/fonts
+	fc-cache -v
+else
+	curl --output-file ~/Descargas/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
+	sudo unzip ~/Descargas/DepartureMono.zip -d /usr/share/fonts
+	fc-cache -v
+fi
+
+echo "Agregando alias a fish"
+
+fish
+
+alias --save n="sudo nvim"
+alias --save update="sudo apt update"
+alias --save upgrade="sudo apt upgrade"
+
+echo "Instalando NvChad"
+
+rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
