@@ -36,22 +36,20 @@ echo "Descargando Departure Mono y agregando Departure Mono"
 
 if [ -d ~/Downloads ];
 then
-	curl --output-file ~/Downloads/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
+	curl --output ~/Downloads/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
 	sudo unzip ~/Downloads/DepartureMono.zip -d /usr/share/fonts
 	fc-cache -v
 else
-	curl --output-file ~/Descargas/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
+	curl --output ~/Descargas/DepartureMono.zip https://departuremono.com/assets/DepartureMono-1.420.zip
 	sudo unzip ~/Descargas/DepartureMono.zip -d /usr/share/fonts
 	fc-cache -v
 fi
 
-echo "Agregando alias a fish"
+#echo "Agregando alias a fish"
 
-fish
-
-alias --save n="sudo nvim"
-alias --save update="sudo apt update"
-alias --save upgrade="sudo apt upgrade"
+#alias --save n="sudo nvim"
+#alias --save update="sudo apt update"
+#alias --save upgrade="sudo apt upgrade"
 
 echo "Instalando NvChad"
 
