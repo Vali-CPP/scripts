@@ -9,7 +9,7 @@ then
 	echo "pues vaya y configurela, mamon"
 fi
 
-sudo apt install -y i3 kitty neovim fish polybar rofi freetube tmux nitrogen
+sudo apt install -y i3 kitty neovim fish polybar rofi freetube tmux nitrogen grub-customizer transmission
 
 echo "copiando dotfile del repo princial"
 
