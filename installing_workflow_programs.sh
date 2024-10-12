@@ -1,16 +1,11 @@
 #! /bin/bash
 
+echo "bienvenido a tu instalacion de programas en Linux V1.0, sientate y disfruta de la vida mientras instalamos toda esta porqueria ;D"
+
+sleep 3
+
 sudo apt update
 sudo apt upgrade
-
-echo "Configuraste Git con tu nueva SSH?:"
-
-read respuesta
-
-if (( repuesta != "y" ))
-then
-	echo "pues vaya y configurela, mamon"
-fi
 
 sudo apt install -y i3 kitty neovim fish polybar rofi tmux nitrogen transmission zathura
 
