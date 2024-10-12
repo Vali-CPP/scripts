@@ -26,7 +26,7 @@ cp -r .tmux.conf ~/
 
 echo "Instalando Oh My Fish"
 
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
 
 echo "Agregando Oh My Fish al .bashrc"
 
