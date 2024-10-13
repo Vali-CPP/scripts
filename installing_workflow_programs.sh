@@ -46,9 +46,6 @@ fi
 #alias --save update="sudo apt update"
 #alias --save upgrade="sudo apt upgrade"
 
-echo "Instalando NvChad"
+echo "Instalando KickStarter para Nvim"
 
-rm -rf ~/.config/nvim
-rm -rf ~/.local/state/nvim
-rm -rf ~/.local/share/nvim
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+git clone https://github.com/nvim-lua/kickstart.nvim.git $HOME/.config/nvim
